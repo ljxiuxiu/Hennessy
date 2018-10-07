@@ -1,0 +1,367 @@
+*{
+    margin:0;
+    padding:0;
+}
+a,a:hover,.footer p, .lc_article p{
+    color: #4F5053;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    background: #000;
+}
+@font-face {
+    font-family: icon;
+    src:url("../../public/font/iconfont.ttf");
+}
+@font-face {
+    font-family: icon1;
+    src:url("../../public/font/iconfont1.ttf");
+}
+@font-face {
+    font-family: icon2;
+    src:url("../../public/font/iconfont2.ttf");
+}
+@font-face {
+    font-family: icon3;
+    src:url("../../public/font/iconfont3.ttf");
+}
+.header{
+    width: 90%;
+    height: 165px;
+    line-height:165px;
+    margin:0px auto;
+    position: absolute;
+    top:0px;
+    left:60px;
+    z-index: 7;
+}
+.header img{
+    width: 180px;
+    height: 103px;
+}
+.col-sm-4 ul{
+    width: 290px;
+    height: 37px;
+    float: right;
+}
+.col-sm-4 ul li{
+    float: left;
+}
+.col-sm-4 ul li a{
+    color: #bababa;
+}
+.col-sm-4 ul li span{
+    width: 20px;
+    height: 12px;
+    display: inline-block;
+    margin:0 15px 0 5px;
+    background: url("../../public/images/ljx-xia.png") no-repeat 0 -5px;
+    background-size: cover;
+
+}
+.footer{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    position: absolute;
+    bottom:10px;
+    left:0;
+    z-index: 7;
+}
+.footer ul{
+    width: 400px;
+    height: 20px;
+    margin:0 auto;
+}
+.footer ul li{
+    float: left;
+    margin-right:10px;
+}
+.footer p{
+    height: 20px;
+    margin:0;
+    padding:0;
+}
+
+#content{
+    width: 100%;
+}
+#center{
+    width: 70%;
+    height: 100%;
+    margin:auto;
+    background: url("../../public/images/home-display-bottle-split.min.jpg") no-repeat ;
+    background-size: 100% 100%;
+}
+#left,#right{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+#left{
+    background: url("../../public/images/gradient-left.png");
+    background-size: 100% 100%;
+    opacity: 0;
+}
+#right{
+    background: url("../../public/images/gradient-right.png");
+    background-size: 100% 100%;
+    opacity: 0;
+}
+#l_content,#r_content{
+    width: 45%;
+    height: 400px;
+    margin-top:-150px;
+    text-align: center;
+    position: absolute;
+    top:50%;
+}
+#l_content{
+    left:0;
+}
+#r_content{
+    right:0;
+}
+.lc_article{
+    width: 580px;
+    height: 400px;
+    opacity: 0.5;
+    position: absolute;
+    top:60px;
+}
+#l_content .lc_article{
+    left:-50px;
+}
+#r_content .lc_article{
+    width: 440px;
+    right:0;
+}
+.lc_article h4,.cta span,.info span,.entry h5{
+    color:#C0A064;
+}
+.lc_article span{
+    font-size: 18px;
+}
+.lc_article h1{
+    color: #fff;
+    font-size:48px;
+    margin:30px 0 ;
+}
+.lc_article h1:before,  .lc_article h1:after{
+    display: inline-block;
+    content: '';
+    width: 30px;
+    height: 1px;
+    margin: .35em 22px;
+    background: white;
+    opacity: .4;
+}
+
+.lc_article p{
+    padding:0 20%;
+}
+#r_content .lc_article p{
+    padding:0 10%;
+}
+.solid {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.cta{
+    display: inline-block;
+    margin-top: 35px;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+}
+.icon{
+    position: relative;
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.icon .circle{
+    border: 2px #c4a366 solid;
+    border-radius: 100%;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+}
+.icon .icon-self{
+    font-family: icon;
+    color: #c4a366;
+    line-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+}
+#r_content .lc_article .icon-self{
+    font-family: icon1;
+}
+#wfix{
+    width: 120px;
+    height: 70px;
+    position: fixed;
+    bottom:20px;
+    right:70px;
+}
+#wfix img{
+    width: 24px;
+    height: 24px;
+    float: left;
+    margin-top:20px;
+}
+#wfix .img1{
+    width: 70px;
+    height: 70px;
+    margin:0 0 0 15px;
+}
+
+
+
+/*弹窗*/
+#alert{
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    position: fixed;
+    background: transparent;
+    display: none;
+}
+.alshow{
+    position: absolute;
+    width: 740px;
+    height: 280px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: black;
+    border: 2px solid #83703d;
+    text-align: center;
+    padding-top: 40px;
+}
+.alshow i{
+    width: 180px;
+    height: 103px;
+    display: block;
+    margin: 0 auto;
+}
+.alshow i img{
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+.alshow p{
+    font-family: microsoft yahei, 'loraregular', serif;
+    font-size: 30px;
+    margin: 40px auto;
+    color: #ffffff;
+}
+
+
+.entry h5{
+    font-size: 16px;
+}
+.entry p{
+    text-align: left;
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #BEBEBE;
+}
+.entry .cta{
+    opacity:1;
+}
+.entry .icon-self{
+    font-family: icon3;
+}
+
+#intro{
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    top:0;
+    left:-50%;
+    overflow: scroll;
+    z-index: 10;
+    /*left:0;*/
+}
+#right_img{
+    width: 50%;
+    height: 100%;
+    z-index: 6;
+    position: absolute;
+    top:0;
+    left: -50%;
+    opacity: 0;
+    background: url("../../public/images/home-display-bottle-full.min.jpg") -130px 0 ;
+    background-size: cover;
+}
+#intro::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+.i_close{
+    width: 42px;
+    height: 42px;
+    position: fixed;
+    top:24px;
+    left:24px;
+    cursor: pointer;
+    opacity: 0;
+}
+.i_close .solid{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+}
+.i_close .solid.circle{
+    border:2px solid #ccc;
+    border-radius: 50%;
+}
+.i_close .solid.icon-self{
+    line-height:42px;
+    font-size:16px;
+    text-align: center;
+    font-family:icon2 ;
+    color: #ccc;
+}
+
+#intro svg{
+    width: 50px;
+    height: 200px;
+    position: fixed;
+    left: 20px;
+    /*calc()函数用于动态计算长度值*/
+    top: calc((100% - 160px) / 2);
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+}
+#intro svg circle{
+    width: 10px;
+    height: 10px;
+}
+.entry{
+    width: 400px;
+    height: 688px;
+    text-align: center;
+    cursor: pointer;
+    margin:0 auto;
+    opacity: 0.2;
+}
+.encontent{
+    position: absolute;
+    top:0px;
+    left:50%;
+    margin-left:-200px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search global | Hennessy </title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/ljx_index.css">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/search_info.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+
+</head>
+<body>
+{%include 'head.html'%}
+<div id="main">
+    <div class="container-fluid">
+        <h3 class="title"><strong>{{length}}</strong> &nbsp;文章&nbsp; <strong>"{{text}}"</strong></h3>
+        {%if length<8%}
+        {%include 'search.html'%}
+        {%endif%}
+
+        {%if length>8%}
+        <div id="main_c">
+            <div class="main">
+                {%include 'search.html'%}
+            </div>
+        </div>
+        <a class="l_prev" href="#"></a>
+        {%endif%}
+
+    </div>
+</div>
+{%include 'foot.html'%}
+<script src="../../public/js/search_info.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!--list表-->
+{%for s_info in search_info%}
+<!--新点干邑-->
+{%if s_info.tid==2%}
+{%if s_info.lid==1%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/xzl/syxl"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%if s_info.lid==2%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/xzl/xd"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%if s_info.lid>2 && s_info.lid<10 %}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/xzl/tc"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%endif%}
+<!--轩尼诗 历史-->
+{%if s_info.tid==3%}
+{%if s_info.lid==10 || s_info.lid==11%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/jhj"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%if s_info.lid==12%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/jhj/history"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%if s_info.lid==13%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/index"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%endif%}
+<!--调酒-->
+{%if s_info.tid==4%}
+{%if s_info.lid==14 || s_info.lid==15%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/jhj/drinks"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%if s_info.lid==16 || s_info.lid==17%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 pull-left ">
+            <h3>{{s_info.tname}}</h3>
+            <a href="/jhj/mixter"><p>{{s_info.lname}}</p></a>
+        </div>
+    </div>
+</div>
+{%endif%}
+{%endif%}
+{%endfor%}
+
+<!--drinks-->
+{%for s_in2 in search_info2%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 pull-left">
+            <img src="{{s_in2.dphoto}}" />
+        </div>
+        <div class="col-xs-12 col-sm-9 pull-right">
+            <a href="/jhj/drinks"><h3>{{s_in2.dtitle}}</h3></a>
+            <h5>{{s_in2.way}}</h5>
+            <p>{{s_in2.op1}}<br/>{{s_in2.op2}}<br/>{{s_in2.op3}}<br/>{{s_in2.op4}}<br/>{{s_in2.op6}}</p>
+        </div>
+    </div>
+</div>
+{%endfor%}
+
+<!--调酒师 mixter-->
+{%for s_in3 in search_info3%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 pull-left">
+            <img src="{{s_in3.mphoto}}" />
+        </div>
+        <div class="col-xs-12 col-sm-9 pull-right">
+            <a href="/jhj/mixter"><h3>{{s_in3.mcountry}}</h3></a>
+            <p>{{s_in3.content1}}{{s_in3.content2}}{{s_in3.content3}}{{s_in3.content4}}</p>
+        </div>
+    </div>
+</div>
+{%endfor%}
+
+<!--简介-->
+{%for s_in4 in search_info4%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 pull-left">
+            <img src="{{s_in4.photo}}" />
+        </div>
+        <div class="col-xs-12 col-sm-9 pull-right">
+            <a href="/intro#page{{s_in4.id}}"><h3>{{s_in4.title}}</h3></a>
+            <p>{{s_in4.idiv}}</p>
+        </div>
+    </div>
+</div>
+{%endfor%}
+<!--history-->
+{%for s_in5 in search_info5%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 pull-left">
+            <img src="{{s_in5.hphoto}}" />
+        </div>
+        <div class="col-xs-12 col-sm-9 pull-right">
+            <a href="/jhj/history"><h3>{{s_in5.hyear}}</h3></a>
+            <p>{{s_in5.hdescription}}</p>
+        </div>
+    </div>
+</div>
+{%endfor%}
+
+<!--news-->
+{%for s_in6 in search_info6%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 pull-left">
+            <img src="{{s_in6.photo}}" />
+        </div>
+        <div class="col-xs-12 col-sm-9 pull-right">
+            <a href="/ydgd"><h3>{{s_in6.title}}</h3></a>
+            <p>{{s_in6.content}}</p>
+        </div>
+    </div>
+</div>
+{%endfor%}
+
+<!--talents-->
+{%for s_in7 in search_info7%}
+<div class="s_info">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3 pull-left">
+            <img src="{{s_in7.tphoto}}" />
+        </div>
+        <div class="col-xs-12 col-sm-9 pull-right">
+            <a href="/jhj"><h3>{{s_in7.title}}</h3></a>
+            <p>{{s_in7.description}}</p>
+        </div>
+    </div>
+</div>
+{%endfor%}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调酒师干邑饮品配方 - 轩尼诗 | Hennessy</title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/jhj_index.css">
+    <link rel="stylesheet" href="../../public/css/like.css">
+    <link rel="stylesheet" href="../../public/css/animate.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+    <script src="../../public/js/jhj_index.js"></script>
+    <script src="../../public/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+</head>
+<body>
+{%include '../ljx/head.html'%}
+<div class="iitop">
+    <div id="heading">
+        <div class="container-fluid">
+            <ol class="navli">
+                <li><a href="/index">主页</a></li>
+                <li><a href="/jhj/createDrink">创意特饮</a></li>
+                <li>调酒师</li>
+            </ol>
+        </div>
+
+    </div>
+    <div id="title">
+        <h1 class="wow fadeInDown animated animated" data-wow-delay=".3s">调酒师</h1>
+        <p class="wow fadeInUp animated animated" data-wow-delay=".2s">这里向您介绍几位魅力十足的调酒大师。他们在世界各地以天马行空的想象力及富有创意的调酒，将轩尼诗干邑的品饮体验提升至更高的境界。</p>
+    </div>
+    <div id="select">
+        <div class="container-fluid">
+            <div class="bar-type1">
+                <div class="filter-tag">
+                    <span class="showTitle">5 调酒师</span>
+                    <button type="submit" id="btn-filter" class="btns" title="过滤">过滤</button>
+                </div>
+                <div class="dropDown">
+                    <a href="javascript:;"  title="关闭" class="close"></a>
+                    <form action="" method="post" class="form-filter">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h5> 按区域筛选</h5>
+                                <a href="#" class="la"><label>Europe</label></a>
+                                <a href="#" class="la"><label>Oceania</label></a>
+                                <a href="#" class="la"><label>Asia</label></a>
+                                <a href="#" class="la"><label>North America</label></a>
+                                <a href="#" class="la"><label>South America</label></a>
+
+                            </div>
+                        </div>
+                        <div class="group">
+                            <button type="reset"  id="btn-delete" class="btns" title="清除">清除</button>
+                            <button type="submit" id="btn-save" class="btns" title="Save">Save</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                {%for t in type%}
+                <div class="col-sm-4 wow slideInUp animated animated" data-wow-delay=".1s">
+                    <div class="thumbnail">
+                        <div class="row">
+                            <div class="col-xs-12 photos">
+                                <div class=" bling">
+                                <a href="jhj/mixter_look?mid={{t.mid}}"><img src="../{{t.mphoto}}"/></a>
+                                <div class="square">
+                                    <h2> mixter</h2>
+                                    <p id="pp"><a href="/jhj/look?mid={{t.mid}}" style="font-size:1em;">{{t.mtitle}}</a></p>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="caption">
+                                    <div class="addr">{{t.mcountry}}</div>
+                                    <p><a href="/jhj/look?mid={{t.mid}}">{{t.mdescription}}</a></p>
+                                    <a href="/jhj/look?mid={{t.mid}}" title="探索" class="explore">探索</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+
+    </div>
+</div>
+{%include '../ljx/foot.html'%}
+</body>
+
+

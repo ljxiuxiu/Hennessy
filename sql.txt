@@ -1,0 +1,74 @@
+create table user(
+	uid int primary key auto_increment,
+	uname varchar(20) not null UNIQUE,
+	pwd varchar(20) not null
+);
+
+create table type(
+	tid int primary key auto_increment,
+	tname varchar(20)
+);
+
+insert into type values(0,"主页");
+insert into type values(0,"干邑系列");
+insert into type values(0,"轩尼诗世家");
+insert into type values(0,"创意特饮");
+insert into type values(0,"新闻");
+
+create table list(
+	tid int,
+	lid int primary key auto_increment,
+	lname varchar(30),
+	constraint FK_tid foreign key(tid) references type(tid)
+);
+
+insert into list values(2,0,"所有系列");
+insert into list values(2,0,"新点干邑");
+insert into list values(2,0,"轩尼诗V.SELECT.O.P特别珍藏版");
+insert into list values(2,0,"詹姆士轩尼诗 JAMES HENNESSY干邑");
+insert into list values(2,0,"轩尼诗X.0");
+insert into list values(2,0,"轩尼诗百乐延皇禧");
+insert into list values(2,0,"轩尼诗百乐延干邑");
+insert into list values(2,0,"轩尼诗李察");
+insert into list values(2,0,"轩尼诗X.O MARC NEWSON限量版");
+insert into list values(3,0,"匠心独运");
+insert into list values(3,0,"风华人物");
+insert into list values(3,0,"历史");
+insert into list values(3,0,"参观轩尼诗庄园");
+insert into list values(4,0,"轩尼诗创意特饮");
+insert into list values(4,0,"世界各地的调酒");
+insert into list values(4,0,"调酒师");
+insert into list values(4,0,"地点");
+
+create table news(
+	nid int primary key auto_increment,
+	title varchar(50),
+	content varchar(200),
+	ydgd varchar(10) default "阅读更多",
+	photo varchar(100)
+);
+
+insert into news values(0,"轩尼诗X.O为丝绸之路谱写感官之旅","七名艺术家来自七个位于传奇丝绸之路的国家。他们沉醉于轩尼诗X.O展现的专业知识和精湛工艺，并以此为灵感，为其创造独一无二的艺术品。",default,"public/images/gettyimages-682278874_hr_198x353_6.jpg");
+insert into news values(0,"冬季烈酒特饮","探索多款精选轩尼诗鸡尾酒，为冬季的亲朋好友聚会增添一份喜气。",default,"public/images/hennessy-winters-spirit-black-background-lr_11_12_6_2.jpg");
+insert into news values(0,"由CARNOVSKY匠心打造的轩尼诗V.S.O.P限量特别珍藏版","为弘扬品牌支持艺术的传统，轩尼诗每年均会与备受尊敬的艺术家合作，推出轩尼诗V.S.O.P限量特别珍藏版。在品牌创立200周年前夕，轩尼诗V.S.O.P限量特别珍藏版透过米兰艺术设计组合Carnovsky独特的多层次构思，探索悠久历史传承。",default,"public/images/hp-v2.jpg");
+
+
+create table intro(
+	id int primary key auto_increment,
+	tname varchar(20),
+	title varchar(50),
+	content varchar(100),
+	pic varchar(60),
+	photo varchar(60),
+	idiv varchar(100),
+	ih3 varchar(20),
+	ip varchar(210),
+	ih4 varchar(20),
+	ip1 varchar(210)
+);
+
+insert into intro values(0,"第1部分","轩尼诗百乐廷皇禧干邑是如何酿造的？ ","轩尼诗百乐廷皇禧干邑蕴含令人叹为观止的甄选艺术，是历任调配总艺师不懈追求卓越的结晶。","../../public/images/preview-video-1_0.jpg","../../public/images/question-1-visu.jpg","调配总艺师的非凡技艺在于，他能准确判断“生命之水”的陈化状态，并将它们孕育至优雅的高峰。所谓“高峰”，指的正是“生命之水”达至美妙状态时那个至关重要而又稍纵即逝的微妙时刻。","七代传承的调配总艺师家族","轩尼诗百乐廷皇禧干邑是调配总艺师颜·费尔沃（Yann Fillioux）最新力作，是一款非限量版的轩尼诗佳酿。它蕴含令人叹为观止的甄选艺术，是轩尼诗专用的调配师家族——费尔沃家族集七代传承之力而成的匠心之作。","精准的甄选、陈化与调配","为创作轩尼诗百乐廷皇禧干邑，调配总艺师充分施展其非凡技艺与过人才华，首先对“生命之水”进行严苛的甄选：在每个特定年份的10,000种“生命之水”中，平均仅有10种可被甄选用于轩尼诗百乐廷皇禧干邑的调配。继而，调配总艺师要决定将各种“生命之水”调配成轩尼诗百乐廷皇禧干邑的美妙时机——只有当精细与力量达到平衡，才是可遇不可求的优雅高峰。");
+insert into intro values(0,"第2部分","轩尼诗百乐廷皇禧干邑的口感如何？  ","这是一款优雅的干邑杰作，带给你非凡的感受。","../../public/images/preview-video-2_2.jpg","../../public/images/question-2-visu.jpg","轩尼诗百乐廷皇禧干邑的淡雅色泽，预示它是一款清新愉悦的佳酿。个中绽放的花香，让人联想起纯净、清爽的春日。","出乎意料的淡雅色泽","很少能有一款高年份的“生命之水”能呈现柔和如瓷般润泽的浅金色。这是因为“生命之水”被储藏在单宁含量特别低的古老橡木桶中进行陈化，橡木仅对其产生细微的影响，可以尽量保留它原有的精妙特质。","生机勃勃的口感","淡雅的色泽预示着轩尼诗百乐廷皇禧干邑是一款清新愉悦的佳酿。徐徐而来的花香让人联想起纯净、清爽的春日。每一次浅酌，茉莉、橙花的馨香以及微妙的烟熏、香料气息层层绽放、相互唱和。直至饮尽最后一滴，优雅的香气依然缱绻于口腔之中，余韵不尽。予人非同寻常的美妙感受。");
+insert into intro values(0,"第3部分","轩尼诗百乐廷皇禧干邑的价格如何？ ","轩尼诗百乐廷皇禧的价值在于其所蕴含的珍稀的“生命之水”。","../../public/images/preview-video-3_0.jpg","../../public/images/question-3-visu.jpg","对“生命之水”的严苛甄选与悉心孕育，需要非凡的技艺与过人的才华。","价值源于珍罕","轩尼诗百乐廷皇禧干邑的价值在于其所蕴含的“生命之水”的珍罕：其中不乏轩尼诗窖藏中最为宝贵的“生命之水”调配而成。 ","万中取十","对于每个特定年份而言，10,000种上佳的“生命之水”中，平均仅有10种有潜质在日后被甄选用于轩尼诗百乐廷皇禧干邑的调配。对“生命之水”的严苛甄选与悉心孕育，需要非凡的技艺与过人的才华。");
+insert into intro values(0,"第4部分","我应如何品赏轩尼诗百乐廷皇禧干邑？ ","品赏轩尼诗百乐廷皇禧干邑的方式是将其盛载于郁金香形状的水晶高脚杯中纯饮。","../../public/images/preview-video-4.jpg","../../public/images/question-4-visu.jpg","正因轩尼诗百乐廷皇禧干邑是调配总艺师甄选艺术的体现，在品饮时选择与之相得益彰的氛围与同伴，共同品鉴这款干邑杰作的精妙之处，本身也是一门艺术。","最纯粹的品赏方式","在室温下，将20至40毫升的酒液倒入郁金香形状的水晶高脚杯中纯饮。这是对于轩尼诗百乐廷皇禧干邑最纯粹的品赏方式。","历久难忘的体验","由于轩尼诗百乐廷皇禧干邑是调配总艺师甄选艺术的体现，因此，选择与之相得益彰的氛围与同伴，共同品鉴这款干邑杰作的精妙之处，本身也是一门艺术。与其他鉴赏家共享这美妙的臻赏体验吧。为使这款干邑杰作的精妙特质得以完全展现，建议您在12°至14°的室温下，搭配口感清爽、微酸的开胃菜享用。");
+insert into intro values(0,"第5部分","我应如何储藏轩尼诗百乐廷皇禧干邑？ ","密封的酒瓶可更好地保存轩尼诗百乐廷皇禧干邑的珍罕品质，使之历久不变。","../../public/images/preview-video-5.jpg","../../public/images/question-5-visu.jpg","干邑与葡萄酒的区别在于，它拥有历久不变的储藏潜力。一旦从橡木桶被移至玻璃瓶中，“生命之水”陈化过程将中止，多年前因蒸馏而产生的蓬勃香气亦由此被封存在酒液中。","永无止境的升华","与葡萄酒类似，干邑会随岁月流逝越发醇香。历经在橡木桶内的陈酿后，干邑在空气、“生命之水”与橡木的共同作用下焕发活力，优雅细腻的特质得以逐步展现。但是，干邑与葡萄酒的区别在于，它拥有历久不变的储藏潜力。当“生命之水”从橡木桶被移至玻璃瓶中后，陈化过程将终止，馥郁酒香由此被妥善封存在这些多年前蒸馏而出的“生命之水”里。因此，密封的酒瓶可更好地保存轩尼诗百乐廷皇禧的珍罕品质，使之历久不变。","正确储藏以延续臻赏体验","将酒瓶直立储藏在室温或18至22℃的阴暗环境中。在开启一瓶轩尼诗百乐廷皇禧干邑后，鉴于这款产品的口感是如此精妙，建议在一年内饮用完毕。");

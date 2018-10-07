@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轩尼诗V.S.O.P干邑 | 轩尼诗酒厂历史 | 轩尼诗 | Hennessy</title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/jhj_index.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <link rel="stylesheet" href="../../public/css/animate.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+    <script src="../../public/js/jhj_index.js"></script>
+    <script src="../../public/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+</head>
+<body>
+{%include '../ljx/head.html'%}
+<div class="iitop">
+    <div id="heading">
+        <div class="container-fluid">
+            <ol class="navli">
+                <li><a href="/index">主页</a></li>
+                <li><a href="/jhj/family">轩尼诗世家</a></li>
+                <li>历史</li>
+            </ol>
+        </div>
+
+    </div>
+    <div id="title">
+            <h1 class="wow fadeInDown animated animated" data-wow-delay=".3s">历史</h1>
+            <p class="wow fadeInUp animated animated" data-wow-delay=".2s">李察·轩尼诗于1765年创建了轩尼诗公司，立志实现酿造全球最优质干邑的梦想。这一梦想如今仍处处体现于轩尼诗的高品质与创意中。</p>
+    </div>
+    </div>
+    <div id="content">
+        <div class="container-fluid">
+            <ul class="nav-parts">
+                {%for t in type%}
+                <li><a href="javascript:;" title="{{t.logo}}">{{t.logo}}</a></li>
+                {%endfor%}
+            </ul>
+            <div class="history-list">
+                {%for t in type%}
+                <div class="tab-pane">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-8  col-sm-offset-2">
+                                <ul class="nav-year">
+                                    {%for o in outcome%}
+                                    {%if o.pid==1 && t.pid==1 %}
+                                    <li><a href="javascript:;">{{o.hyear}}</a></li>
+                                    {%elseif o.pid==2 && t.pid==2 %}
+                                    <li><a href="javascript:;">{{o.hyear}}</a></li>
+                                    {%elseif o.pid==3 && t.pid==3 %}
+                                    <li><a href="javascript:;">{{o.hyear}}</a></li>
+                                    {%elseif o.pid==4 && t.pid==4 %}
+                                    <li><a href="javascript:;">{{o.hyear}}</a></li>
+                                    {%endif%}
+                                    {%endfor%}
+                                </ul>
+                            </div>
+                            <div class="col-xs-12">
+                                <div class="history-info">
+                                    <div class="history-slider">
+                                        <div class="sliders" style="width:2500px;">
+                                            {%for o in outcome%}
+                                            {%if o.pid==1 && t.pid==1 %}
+                                            <div class="item" style="width:1250px;">
+                                                <div class="inner" style="width:823px;">
+                                                    <div class="include">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-5 photos vcenter">
+                                                                <img src="../{{o.hphoto}}"/>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-5 col-sm-offset-1 vcenter">
+                                                                <h2>{{o.hyear}}</h2>
+                                                                <p>{{o.hdescription}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {%elseif o.pid==2 && t.pid==2 %}
+                                            <div class="item" style="width:1250px;">
+                                                <div class="inner" style="width:823px;">
+                                                    <div class="include">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-5 photos vcenter">
+                                                                <img src="../{{o.hphoto}}"/>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-5 col-sm-offset-1 vcenter">
+                                                                <h2>{{o.hyear}}</h2>
+                                                                <p>{{o.hdescription}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {%elseif o.pid==3 && t.pid==3 %}
+                                            <div class="item" style="width:1250px;">
+                                                <div class="inner" style="width:823px;">
+                                                    <div class="include">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-5 photos vcenter">
+                                                                <img src="../{{o.hphoto}}"/>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-5 col-sm-offset-1 vcenter">
+                                                                <h2>{{o.hyear}}</h2>
+                                                                <p>{{o.hdescription}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {%elseif o.pid==4 && t.pid==4 %}
+                                            <div class="item" style="width:1250px;">
+                                                <div class="inner" style="width:823px;">
+                                                    <div class="include">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-5 photos vcenter">
+                                                                <img src="../{{o.hphoto}}"/>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-5 col-sm-offset-1 vcenter">
+                                                                <h2>{{o.hyear}}</h2>
+                                                                <p>{{o.hdescription}}</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {%endif%}
+                                            {%endfor%}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="spirit">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3 pull-left">
+                                    <h2>进取精神</h2>
+                                    <div class="country">
+                                        <div class="country-year">
+                                            {%for o in outcome%}
+                                            {%if o.pid==1 && t.pid==1 %}
+                                            <p>{{o.country}}&nbsp;&nbsp;-&nbsp;&nbsp;<span>{{o.syear}}</span></p>
+                                            {%elseif o.pid==2 && t.pid==2 %}
+                                            <p>{{o.country}}&nbsp;&nbsp;-&nbsp;&nbsp;<span>{{o.syear}}</span></p>
+                                            {%elseif o.pid==3 && t.pid==3 %}
+                                                {%if o.sid==9 ||  o.sid==10 %}
+                                            <p>{{o.country}}&nbsp;&nbsp;&nbsp;&nbsp;<span>{{o.syear}}</span></p>
+                                                {%else%}
+                                            <p>{{o.country}}&nbsp;&nbsp;-&nbsp;&nbsp;<span>{{o.syear}}</span></p>
+                                                {%endif%}
+                                            {%elseif o.pid==4 && t.pid==4 %}
+                                            <p>{{o.country}}&nbsp;&nbsp;&nbsp;&nbsp;<span>{{o.syear}}</span></p>
+                                            {%endif%}
+                                            {%endfor%}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 pull-right photos">
+                                    <img src="../../public/images/photo-history-1.png"/>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+{%include '../ljx/foot.html'%}
+</body>

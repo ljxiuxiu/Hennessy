@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>如何品赏轩尼诗百乐廷皇禧干邑</title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/Hns_intro_how.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../public/css/ljx_Hennessy_intro.css">
+
+</head>
+<body>
+<div id="alert">
+    <div class="alshow">
+        <i><img src="../../public/images/logo.svg" /></i>
+        <p>浏览页面前，请确保你已经年满十八周岁</p>
+    </div>
+</div>
+<header class="header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <img  src="../../public/images/logo.svg" />
+            </div>
+            <div class="col-sm-4 pull-right">
+                <ul>
+                    <li class="ssgy"><a href="javascript:void(0)">探索轩尼诗百乐廷皇禧干邑<span></span></a></li>
+                    <li><a href="">精•诚 所制</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+{%include 'Henness_head.html'%}
+<div id="content">
+    <div id="left"></div>
+    <div id="right"></div>
+    <div id="center"></div>
+    <div id="l_content">
+        <a href="javascript:void(0)" onclick="intro()">
+            <div class="lc_article">
+            <h4>轩尼诗百乐廷皇禧</h4>
+            <h1>简介</h1>
+            <p>这款干邑是轩尼诗调配师家族——费尔沃家族七代调配大师不懈追求最佳“生命之水”的心血结晶。</p>
+            <div class="cta">
+                <div class="icon">
+                    <div class="solid circle"></div>
+                    <div class="solid icon-self">&#xe625;</div>
+                </div>
+                <span>了解更多</span>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div id="r_content">
+        <a href="javascript:void(0)" onclick="intro()" >
+            <div class="lc_article">
+                <h4>精•诚 所制</h4>
+                <h1>万中取十</h1>
+                <p>对于每个特定年份而言，10,000种上佳的“生命之水”中，平均仅有10种可被甄选用于轩尼诗百乐廷皇禧干邑的调配。甄选不仅是一门科学，更是一门艺术。</p>
+                <div class="cta">
+                    <div class="icon">
+                        <div class="solid circle"></div>
+                        <div class="solid icon-self">&#xe608;</div>
+                    </div>
+                    <span>了解更多</span>
+                </div>
+            </div>
+
+        </a>
+    </div>
+    <div id="intro">
+        <!--可缩放矢量图形-->
+        <svg>
+            <!-- cx  x 坐标  cy y坐标  fill填充颜色  stroke描边颜色 -->
+            <a href="#entry1">
+                <circle cx="20" cy="36" r="6.5" fill="#ABABAD" stroke="#c4a366" stroke-width="2.5" fill-opacity="0"></circle>
+            </a>
+            <a href="#entry2">
+                <circle cx="20" cy="58" r="5" fill="#ABABAD" stroke="#c4a366" stroke-width="0" fill-opacity="1"></circle>
+            </a>
+            <a href="#entry3">
+                <circle cx="20" cy="80" r="5" fill="#ABABAD" stroke="#c4a366" stroke-width="0" fill-opacity="1"></circle>
+            </a>
+            <a href="#entry4">
+                <circle cx="20" cy="102" r="5" fill="#ABABAD" stroke="#c4a366" stroke-width="0" fill-opacity="1"></circle>
+            </a>
+            <a href="#entry5">
+                <circle cx="20" cy="124" r="5" fill="#ABABAD" stroke="#c4a366" stroke-width="0" fill-opacity="1"></circle>
+            </a>
+        </svg>
+        <div onclick="intro_close()" class="i_close">
+            <div class="solid circle"></div>
+            <div class="solid icon-self">&#xe61a;</div>
+        </div>
+        <div class="encontent">
+            {%for intro in intros%}
+            <a href="/intro#page{{intro.id}}">
+                <div class="entry enav navigationLink{{intro.id}}" >
+                    <div id="entry{{intro.id}}">
+                        <div style="height: 200px"></div>
+                        <h5>{{intro.tname}}</h5>
+                        <h2>{{intro.title}}</h2>
+                        <div class="info">
+                            <p>{{intro.content}}</p>
+                            <div class="cta">
+                                <div class="icon">
+                                    <div class="solid circle"></div>
+                                    <div class="solid icon-self">&#xe60d;</div>
+                                </div>
+                                <span>点击了解更多</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+            {%endfor%}
+        </div>
+
+    </div>
+    <div onclick="intro_close()" id="right_img"></div>
+</div>
+
+<div id="wfix">
+    <img src="../../public/images/fb.svg" />
+    <img class="img1" src="../../public/images/HPI Launch.png" />
+</div>
+<footer class="footer">
+    <ul>
+        <li><a href="">联系方式</a></li>
+        <li><a href="">我们的承诺</a></li>
+        <li><a href="">条款及条件</a></li>
+        <li><a href="">个人资料和COOKIES政策</a></li>
+    </ul>
+    <p>酗酒有害健康。</p>
+    <a href="">沪ICP备10018200号-16</a>
+</footer>
+<script src="../../public/js/ljx_Hennessy_intro.js"></script>
+<script src="../../public/js/Hns_intro_how.js"></script>
+
+</body>
+</html>

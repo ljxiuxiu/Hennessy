@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 调酒师 | 轩尼诗X.O | 轩尼诗 | Hennessy   </title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/jhj_index.css">
+    <link rel="stylesheet" href="../../public/css/like.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+</head>
+<body>
+{%include '../ljx/head.html'%}
+<div class="iitop">
+    {%for details in details%}
+    <div id="heading">
+        <div class="container-fluid">
+             <ol class="navli">
+            <li><a href="/index">主页</a></li>
+            <li><a href="/jhj/createDrink">创意特饮</a></li>
+            <li><a href="/jhj/drinks">轩尼诗创意特饮</a></li>
+            <li>{{details.mtitle}}</li>
+        </ol>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="thumbnail">
+                <div class="row">
+                    <div class="col-md-8 photos">
+                        <img src="../{{details.mphotob}}"/>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="description-block">
+                            <div class="desc" id="de">
+                                <p>{{details.content1}}</p>
+                                <p>{{details.content2}}</p>
+                                <p>{{details.content3}}</p>
+                                <p>{{details.content3}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    {%endfor%}
+</div>
+{%include '../ljx/foot.html'%}
+
+<script>
+    $(document).ready(function(){
+        $('#de>p').each(function(index,domEle){
+            //动画开始时间
+            var startTime=index*500+'ms';
+            //为元素添加动画开始时间
+            $(domEle).css({'animation-delay':startTime,'-webkit-animation-delay':startTime});
+        });
+    });
+</script>
+
+</body>
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轩尼诗艺术达人和创新项目 - 轩尼诗 | Hennessy </title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/jhj_index.css">
+    <link rel="stylesheet" href="../../public/css/like.css">
+    <link rel="stylesheet" href="../../public/css/animate.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+    <script src="../../public/js/jhj_index.js"></script>
+    <script src="../../public/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+</head>
+<body>
+    {%include '../ljx/head.html'%}
+    <div class="iitop" >
+        <div id="heading">
+                <div class="container-fluid">
+                    <ol class="navli">
+                        <li><a href="/index">主页</a></li>
+                        <li><a href="/jhj/family">轩尼诗世家</a></li>
+                        <li>风华人物</li>
+                    </ol>
+                </div>
+        </div>
+        <div id="title">
+            <h1 class="wow fadeInDown animated animated" data-wow-delay=".3s">风华人物</h1>
+            <p class="wow fadeInUp animated animated" data-wow-delay=".2s">伟大的艺术家善于将灵感、愉悦和创新视野融入到引人入胜的艺术创作中。不妨透过这些原创先驱的眼睛从不一样的角度去发掘轩尼诗的世界。</p>
+        </div>
+        <div id="select">
+            <div class="container-fluid">
+                <div class="bar-type1">
+                    <div class="filter-tag">
+                        <span class="showTitle">12 风华人物</span>
+                        <a id="btn-filter" class="btns" title="过滤">过滤</a>
+                    </div>
+                    <div class="dropDown">
+                        <a href="javascript:;"  title="关闭" class="close"></a>
+                        <form action="" method="post" class="form-filter">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h5>筛选依据 REGION</h5>
+                                        {%for f in fs %}
+                                        <a href="jhj/filter?fid={{f.fid}}" class="la"><label>{{f.ftitle}}</label></a>
+                                        {%endfor%}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <div class="container-fluid">
+                <div class="row">
+                    {%for t in type%}
+                    <div class="col-sm-4 wow slideInUp animated animated" data-wow-delay=".1s">
+                        <div class="thumbnail">
+                            <div class="row">
+                                <div class="col-xs-12 photos up">
+                                    <div class="in">
+                                        <a href="jhj/index_search?tid={{t.tid}}"><img src="{{t.tphoto}}"/></a>
+                                        <div id="mask">
+                                            <div><h3 id="p-title"><a href="jhj/search?tid={{t.tid}}">{{t.title}}</a></h3></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="caption fix">
+                                        <p style="margin:20px 0 3px;"></p>
+                                        <p><a href="jhj/search?tid={{t.tid}}">{{t.description}}</a></p>
+                                        <a href="jhj/search?tid={{t.tid}}" title="探索" class="explore">探索</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+
+        </div>
+     </div>
+    {%include '../ljx/foot.html'%}
+</body>
+
+

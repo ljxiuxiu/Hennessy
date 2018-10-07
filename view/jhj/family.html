@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最新情报 || Hennessy</title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/jhj_index.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <link rel="stylesheet" href="../../public/css/like.css">
+    <link rel="stylesheet" href="../../public/css/animate.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+    <script src="../../public/js/jhj_index.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+    <script src="../../public/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+</head>
+<body>
+{%include '../ljx/head.html'%}
+<div class="iitop">
+    <div  style="background:#000;">
+        <div id="heading" style="background:#000;">
+            <div class="container-fluid">
+                <ol class="navli" id="me">
+                    <li><a href="/index">主页</a></li>
+                    <li><a href="#">轩尼诗世家</a></li>
+                    <li>NOW</li>
+                </ol>
+                <div id="title" style="clear:both;margin:0;padding:0;" class="wow fadeInDown animated animated" data-wow-delay=".3s">
+                    <h1 style="color:#c7b374;padding:0;">轩尼诗世家 &nbsp;&nbsp;现在</h1>
+                </div>
+            </div>
+        </div>
+        <div id="content" style="margin-top:-20px;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 wow fadeInLeft animated animated animated" data-wow-delay=".5s">
+                        <div class="thumbnail">
+                            <div class="row">
+                                <div class="col-xs-12 photos up">
+                                    <div class="bling blings">
+                                        <a href="#"><img src="../../public/images/family1.jpg"/></a>
+                                        <div class="squares">
+                                            <div class="date date-1">
+                                                <b>8月</b>
+                                                <b>26日</b>
+                                            </div>
+                                            <span class="topic-title" style="display:block;margin: 18px 0 0;">TMaison Hennessy</span>
+                                            <h3 class="post-title" style="margin-top:8px;"><a href="#" style="color:#fff;font-size:14px;text-align: center;">MAURICE HENNESSY先生亲临EDSA SHANGRI-LA宴会厅出席尊贵晚宴及品酒导赏</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 wow fadeInUp animated animated animated" data-wow-delay=".5s">
+                        <div class="thumbnail">
+                            <div class="row">
+                                <div class="col-xs-12 photos up">
+                                    <div class="bling blings">
+                                        <a href="#"><img src="../../public/images/family2.jpg"/></a>
+                                        <div class="squares">
+                                            <div class="date date-1">
+                                                <b>8月</b>
+                                                <b>26日</b>
+                                            </div>
+                                            <span class="topic-title" style="display:block;margin: 18px 0 0;">TMaison Hennessy</span>
+                                            <h3 class="post-title" style="margin-top:8px;"><a href="#" style="color:#fff;font-size:14px;text-align: center;">第四代轩尼诗V.S.O.P尊贵特藏版以火红之姿隆重登陆马来西亚</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 wow fadeInRight animated animated" data-wow-delay=".5s">
+                        <div class="thumbnail">
+                            <div class="row">
+                                <div class="col-xs-12 photos up">
+                                    <div class="bling blings">
+                                        <a href="#"><img src="../../public/images/family3.jpg"/></a>
+                                        <div class="squares">
+                                            <div class="date date-1">
+                                                <b>8月</b>
+                                                <b>26日</b>
+                                            </div>
+                                            <span class="topic-title" style="display:block;margin: 18px 0 0;">TMaison Hennessy</span>
+                                            <h3 class="post-title" style="margin-top:8px;"><a href="#" style="color:#fff;font-size:14px;text-align: center;">与百乐共翔品饮天境之悦轩尼诗百乐廷新装绽现悦享之夜</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new">
+        <h2 class="lastnews">最新消息</h2>
+        <div class="content">
+            <div class="container-fluid">
+                {% for t in  type%}
+                {%if t.tid==11 %}
+                <div class="thumbnail">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 col-md-push-4 photos wow fadeInRight animated animated" data-wow-delay=".5s" >
+                            <a href="/jhj/search?tid={{t.tid}}"><img src="../../public/images/f1.jpg"/></a>
+                        </div>
+                        <div class="col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 col-md-pull-8 wow fadeInLeft  animated animated" data-wow-delay=".5s">
+                            <div class="date">
+                                <b>3月</b>
+                                <b>09日</b>
+                            </div>
+                           <div class="caption">
+                                <p class="topic-title" style="margin: 18px 0 0;">TALENT</p>
+                                <h3 class="post-title" style="margin-top:8px;"><a href="/jhj/search?tid={{t.tid}}">DANIEL ARSHAM：艺术、建筑与表演</a></h3>
+                                <p style="margin: 18px 0 0;"><a href="/jhj/search?tid={{t.tid}}"> DANIEL ARSHAM从历史角度阐释轩尼诗。DANIEL ARSHAM以来自五位国际艺术家的录影片段和艺术作品，阐释轩尼诗与美国的渊源，并透过探索文物般的不同物件，向我们讲述轩尼诗在美国文化中所占的地位。 </a></p>
+                                <a href="/jhj/search?tid={{t.tid}}" class="more">阅读更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endif%}
+                {%endfor%}
+                <div class="thumbnail">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-8 photos wow fadeInLeft animated animated" data-wow-delay=".5s">
+                                <a href="#"><img src="../../public/images/f2.jpg"/></a>
+                        </div>
+                        <div class="col-sm-10 col-sm-offset-1 col-md-4 col-md-offset-0 wow fadeInRight animated animated" data-wow-delay=".5s">
+                            <div class="date">
+                                <b>2月</b>
+                                <b>02日</b>
+                            </div>
+                            <div class="caption">
+                                <p class="topic-title" style="margin: 18px 0 0;">MAISON HENNESSY</p>
+                                <h3 class="post-title" style="margin-top:8px;"><a href="#">隆重呈献<br/>轩尼诗250周年卓越之旅</a></h3>
+                                <p style="margin: 18px 0 0;"><a href="#">是时候揭示这个激动人心的全新项目</a></p>
+                                <a href="#"  class="more">阅读更多</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{%include '../ljx/foot.html'%}
+</body>
+
+

@@ -1,0 +1,158 @@
+<header class="header" data-scrolling>
+    <div class="container-fluid">
+        <div class="row" id="rows">
+            <div class="col-xs-4">
+                <div class="burger_btn">
+                    <div class="icon icon_1" style="top: 0px;  transform: matrix(1, 0, 0, 1, 0, 0)"></div>
+                    <div class="icon icon_2" style="top: 8px; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                    <div class="icon icon_3" style="top: 16px; transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                </div>
+
+            </div>
+            <div class="col-xs-4">
+                <a class="logo" href="/index" title="Hennessy - 酩悦琼浆，凝练未来，始于1765年">
+                    <img class="img-responsive" src="../../public/images/logo.png" alt="Hennessy - 酩悦琼浆，凝练未来，始于1765年" />
+                    <img class="img-responsive img1" src="../../public/images/logo-scrolled.png" alt="Hennessy - 酩悦琼浆，凝练未来，始于1765年" />
+                </a>
+            </div>
+            {%if userInfo.uid%}
+            <div class="col-xs-4 text-right">
+                <a href="javacript:void(0)" title="搜索">
+                    <img class="search" class="img" src="../../public/images/icon-search.png" />
+                </a>
+            </div>
+            {%endif%}
+        </div>
+    </div>
+    <div id="line"><img src="../../public/images/bgd-header-left.png" /><img src="../../public/images/bgd-header-right.png" /></div>
+</header>
+<div id="list">
+    <ul class="list_ul">
+        {%for t in types%}
+
+
+
+        {%if t.tid==1 || t.tid==5%}
+        <a class="list_ul_a" href="/index">
+            <li>
+                {{t.tname}}
+            </li>
+        </a>
+        {%endif%}
+
+        {%if t.tid==2%}
+        <div class="xxx">
+            <a class="list_ul_a" href="javascript:void(0);">
+                <li>
+                    {{t.tname}}
+                    <span class="careta"></span>
+                </li>
+            </a>
+            <div class="list_gy">
+                {%for gy in gys%}
+                {%if gy.lid==1%}
+                <a class="gy_a" href="/xzl/syxl">
+                    <li>{{gy.lname}}</li>
+                </a>
+                {%endif%}
+                {%if gy.lid==2%}
+                <a class="gy_a" href="/xzl/xd">
+                    <li>{{gy.lname}}</li>
+                </a>
+                {%endif%}
+                {%if gy.lid>=3 && gy.lid<10%}
+                <a class="gy_a" href="/xzl/tc">
+                    <li>{{gy.lname}}</li>
+                </a>
+                {%endif%}
+
+                {%endfor%}
+                <li class="list_li"></li>
+            </div>
+        </div>
+
+        {%endif%}
+
+        {%if t.tid==3%}
+        <div class="xxx">
+            <a class="list_ul_a" href="javascript:void(0);">
+                <li>
+                    {{t.tname}}
+                    <span class="careta"></span>
+                </li>
+            </a>
+            <div class="list_gy">
+                {%for xns in xnss%}
+                {%if xns.lid==10 || xns.lid==11%}
+                <a class="xns_a" href="/jhj">
+                    <li>{{xns.lname}}</li>
+                </a>
+                {%endif%}
+                {%if xns.lid==12%}
+                <a class="xns_a" href="/jhj/history">
+                    <li>{{xns.lname}}</li>
+                </a>
+                {%endif%}
+                {%if xns.lid==13%}
+                <a class="xns_a" href="/index">
+                    <li>{{xns.lname}}</li>
+                </a>
+                {%endif%}
+                {%endfor%}
+                <li class="list_li"></li>
+            </div>
+        </div>
+
+        {%endif%}
+
+        {%if t.tid==4%}
+        <div class="xxx">
+            <a class="list_ul_a" href="javascript:void(0);">
+                <li>
+                    {{t.tname}}
+                    <span class="careta"></span>
+                </li>
+            </a>
+            <div class="list_gy">
+                {%for cyty in cytys%}
+                {%if cyty.lid==14 || cyty.lid==15%}
+                <a class="cyty_a" href="/jhj/drinks">
+                    <li>{{cyty.lname}}</li>
+                </a>
+                {%endif%}
+                {%if cyty.lid==16 || cyty.lid==17%}
+                <a class="cyty_a" href="/jhj/mixter">
+                    <li>{{cyty.lname}}</li>
+                </a>
+                {%endif%}
+                {%endfor%}
+                <li class="list_li"></li>
+            </div>
+        </div>
+
+        {%endif%}
+        {%endfor%}
+        {%if userInfo.uid%}
+        <a href="javascript:void(0)" style="color: #fff;" onclick="lgout()"><li>退出</li></a>
+        {%else%}
+        <a href="javascript:void(0)" style="color: #fff;" onclick="login()"><li>注册 / 登录</li></a>
+        {%endif%}
+    </ul>
+</div>
+<div id="search">
+    <div class="container-fluid">
+        <form action=""  method="post">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4 text-center">
+                    <label for="input-search" class="color-3">您在查找什么?</label>
+                    <div class="form-group">
+                        <input type="text" placeholder="查找文章、产品..." id="input-search" name="search_top"/>
+                        <button type="button" id="submit-button-head" class="btn submit-btn" title="搜索">搜索</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="form_close">&#xe629;</div>
+    </div>
+</div>
+{%include 'login.html'%}

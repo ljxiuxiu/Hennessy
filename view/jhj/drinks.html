@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轩尼诗创意调味酒和干邑鸡尾酒配方 - 轩尼诗 | Hennessy</title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/jhj_index.css">
+    <link rel="stylesheet" href="../../public/css/like.css">
+    <link rel="stylesheet" href="../../public/css/animate.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+    <script src="../../public/js/jhj_index.js"></script>
+    <script src="../../public/js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+</head>
+<body >
+{%include '../ljx/head.html'%}
+<div class="iitop" >
+    <div id="heading">
+<<<<<<< HEAD
+        <div class="container-fluid">
+            <ol class="navli">
+                <li><a href="/index">主页</a></li>
+                <li><a href="/jhj/createDrink">创意特饮</a></li>
+                <li>轩尼诗创意特饮</li>
+            </ol>
+        </div>
+=======
+        <ol class="navli">
+            <li><a href="javascript:;">主页</a></li>
+            <li><a href="javascript:;">创意特饮</a></li>
+            <li>轩尼诗创意特饮</li>
+        </ol>
+>>>>>>> origin/master
+    </div>
+    <div id="title">
+        <h1 class="wow fadeInDown animated animated" data-wow-delay=".3s">轩尼诗创意特饮</h1>
+        <p class="wow fadeInUp animated animated" data-wow-delay=".2s"> 我们发明了一些欢享轩尼诗干邑的创新方式，欢迎您尝试我们的建议，找您喜爱的饮法。</p>
+    </div>
+    <div id="select">
+        <div class="container-fluid">
+            <div class="bar-type1">
+                <div class="filter-tag">
+                    <span class="showTitle">9 MIXED DRINK</span>
+                    <a  id="btn-filter" class="btns" title="过滤">过滤</a>
+                </div>
+                <div class="dropDown">
+                    <a href="javascript:;"  title="关闭" class="close"></a>
+                    <form action="" method="post" class="form-filter">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h5>筛选依据 FLAVOUR</h5>
+                                    {%for f in fs %}
+                                    <a href="/jhj/filter1?fsid={{f.fsid}}" class="la"><label>{{f.fstitle}}</label></a>
+                                    {%endfor%}
+                                </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container-fluid">
+            <div class="row">
+                {%for t in type%}
+                <div class="col-sm-4 wow slideInUp animated animated" data-wow-delay=".1s">
+                    <div class="thumbnail">
+                        <div class="row">
+                            <div class="col-xs-12 photos wow fadeInUp animated animated">
+                                <div class="ling">
+                                    <div class="front" style="background: url(../{{t.dphoto}})">
+                                        <div class="create">
+                                            <h2> 轩尼诗创意特饮</h2>
+                                            <p class="pm">drinks</p>
+                                        </div>
+                                    </div>
+                                    <div class="back" style="background: url(../{{t.dphoto}})">
+                                        <div class="create">
+                                            <p id="pt"><a href="/jhj/explore?did={{t.did}}">{{t.dtitle}}</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+</div>
+{%include '../ljx/foot.html'%}
+
+</body>
+
+

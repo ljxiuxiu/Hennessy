@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轩尼诗v.s.o.p干邑 | Hennessy 干邑: 鸡尾酒食谱 | 轩尼诗 | Hennessy</title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/ljx_loginstyle.css">
+    <link rel="stylesheet" href="../../public/css/ljx_index.css">
+    <script src="../../public/js/jquery-1.9.1.js"></script>
+    <script src="../../public/js/bootstrap.js"></script>
+    <script src="../../public/js/ljx_index.js"></script>
+    <script src="../../public/js/ljx_login.js"></script>
+
+</head>
+<body>
+{%include 'head.html'%}
+
+<div id="lb">
+    <div id="content">
+        <a class="lb_a" href="/Hennessy">
+        <div id="imgs">
+            <img style="display: block;" src="../../public/images/home-page-visual-1280x400-01-150dpi_9.jpg" id="img1"  />
+            <img src="../../public/images/site_hennessy_0.jpg" id="img2"  />
+            <img src="../../public/images/bannercarnovskyhomepage_4.png" id="img3"  />
+        </div>
+        </a>
+        <ul>
+            <li style="background: #F1E0A1;"></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <a href="javascript:void(0)" class="prev"></a>
+        <a href="javascript:void(0)" class="next"></a>
+    </div>
+    <div id="fixb"></div>
+</div>
+
+<div id="news">
+    <div class="container-fluid">
+        <h2>最新消息</h2>
+        <div class="row">
+            {%for n in news%}
+            <div class="col-sm-4">
+                <img src="{{n.photo}}" />
+                <h3 class="n_h{{n.nid}}"><a href="/ydgd" title="{{n.title}}">{{n.title}}</a></h3>
+                <p><a href="/ydgd" title="{{n.title}}">{{n.content}}</a></p>
+                <a class="ydgd" href="/ydgd"><span></span>{{n.ydgd}}</a>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</div>
+<div id="fix">
+    <a href="#fixb"></a>
+</div>
+{%include 'foot.html'%}
+
+</body>
+</html>
+
+
+

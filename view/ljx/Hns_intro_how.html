@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轩尼诗百乐廷皇禧干邑是如何酿造的？</title>
+    <link rel="shortcut icon" href="../../public/images/favicon_1_0.ico">
+    <link rel="stylesheet" href="../../public/css/Hns_intro_how.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<div id="top">
+    <div class="c-menu__wrapper">
+        <div class="o-layout">
+            <div class="o-layout__item u-1/5">
+                <img  src="../../public/images/logo.svg" />
+            </div>
+            <div class="o-layout__item u-4/5">
+                <ul>
+                    <li class="ssgy"><a href="javascript:void(0)">探索轩尼诗百乐廷皇禧干邑<span></span></a></li>
+                    <li><a href="javascript:void(0)">精•诚 所制</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    {%include 'Henness_head.html'%}
+    <div class="swiper-wrapper">
+        <div class="swiper-div">
+            {%for intro in intros%}
+            <div  class="swiper-slide" id="page{{intro.id}}">
+                <div class="swiper-content">
+                    <h3 class="c-tname">{{intro.tname}}</h3>
+                    <h1 class="c-title">{{intro.title}}</h1>
+                    <p class="c_content">{{intro.content}}</p>
+                </div>
+                <div class="c-menu_div_wrapper">
+                    <img src="{{intro.pic}}" />
+                    <div class="c-m_content">
+                        {{intro.idiv}}
+                    </div>
+                    <div class="o-layout--reverse">
+                        <div class="o-layout--reverse-img">
+                            <img src="{{intro.photo}}" />
+                        </div>
+                        <div class="o-layout--reverse-p">
+                            <h3>{{intro.ih3}}</h3>
+                            <p>{{intro.ip}}</p>
+                        </div>
+                    </div>
+                    <div class="c-m-bottom">
+                        <div class="c-m-bottom_c">
+                            <h4>{{intro.ih4}}</h4>
+                            <p>{{intro.ip1}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {%endfor%}
+        </div>
+
+        <div id="swiper-button-prev">
+            <a href="javascript:void(0)">
+                <img src="../../public/images/prev.png" />
+            </a>
+        </div>
+        <div id="swiper-button-next">
+            <a href="javascript:void(0)">
+                <img src="../../public/images/next.png" />
+            </a>
+        </div>
+    </div>
+    <div class="swiper-menu">
+        <div class="swiper-menu_content">
+            <div class="swiper-menu_prev swiper-menu_5">
+
+                <div class="swiper-menu_text" >
+                    <h3>第5部分</h3>
+                    <h1>如何储存？</h1>
+                    <p>密封的酒瓶可更好地保存轩尼诗百乐廷皇禧干邑的珍罕品质，使之历久不变。</p>
+                    <div class="cta">
+                        <div class="icon">
+                            <div class="solid circle"></div>
+                            <div class="solid icon-self">&#xe60d;</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {%for intro in intros%}
+            <div class="swiper-menu_prev">
+                <div class="swiper-menu_text">
+                    <h3>{{intro.tname}}</h3>
+                    <h1>{{intro.th3}}</h1>
+                    <p>{{intro.content}}</p>
+                    <div class="cta">
+                        <div class="icon">
+                            <div class="solid circle"></div>
+                            <div class="solid icon-self">&#xe60d;</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            {%endfor%}
+            <div class="swiper-menu_prev swiper-menu_1">
+                <div class="swiper-menu_text">
+                    <h3>第1部分</h3>
+                    <h1>如何酿造？</h1>
+                    <p>轩尼诗百乐廷皇禧干邑蕴含令人叹为观止的甄选艺术，是历任调配总艺师不懈追求卓越的结晶。</p>
+                    <div class="cta">
+                        <div class="icon">
+                            <div class="solid circle"></div>
+                            <div class="solid icon-self">&#xe60d;</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="c-footer__wrapper">
+            <div class="c-footer__head-wrapper">
+                <p>酗酒有害健康</p>
+                <img src="../../public/images/logo.svg" />
+                <p style="text-align:right;"> Rue de la Richonne, 16100 Cognac</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../public/js/jquery-1.9.1.js"></script>
+<script src="../../public/js/Hns_intro_how.js"></script>
+</body>
+</html>

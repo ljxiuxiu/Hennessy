@@ -1,0 +1,311 @@
+.in{
+    position:relative;
+    overflow: hidden;
+    top:0;
+    left:0;
+
+
+}
+.in .overlay {
+    border-bottom: 110px solid #333;
+    border-left: 110px solid transparent;
+    bottom: 0;
+    height: 0;
+    opacity: .95;
+    position: absolute;
+    right: 0;
+    text-indent: -9999px;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    width: 0;
+}
+.in .corner-overlay-content {
+    bottom: 15px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.in:hover .overlay {
+    border-bottom: 800px solid #666;
+    border-left: 800px solid transparent;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.in:hover .corner-overlay-content {
+    opacity: 0;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+.in .overlay-content {
+    bottom: 0;
+    color: #333;
+    left: 0;
+    opacity: 0;
+    padding: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.in .overlay-content h2 {
+    border-bottom: 1px solid #333;
+    padding: 0 0 12px;
+    font-size:18px;
+}
+.in:hover .overlay-content {
+    opacity: 1;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    -moz-transition-delay: 0.3s;
+    -o-transition-delay: 0.3s;
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+#mask{
+    position:absolute;
+    top:0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #5E5E5E;
+    padding:20px 0;
+}
+#mask>div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.center-ig{
+    transition: all 2s ease-in-out;
+}
+.center-ig:hover{
+    transform: scale(0.8);
+}
+.bling{
+    position: relative;
+    float:left;
+    overflow: hidden;
+    height: auto;
+    left:0;
+    top:0;
+    background: #3498db;
+    text-align: center;
+    cursor: pointer;
+}
+.bling img{
+    opacity: 0.95;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.05,1.05,1);
+    transform: scale3d(1.05,1.05,1);
+}
+.bling:hover img {
+    opacity: 0.6;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+.square,.squares,.moves,.square::before{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.bling.blings .squares::before{
+    position:absolute;
+    top: 30px;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 30px rgba(255,255,255,0.2);
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale3d(1.4,1.4,1);
+    transform: scale3d(1.4,1.4,1);
+}
+.square,.moves,.bling.blings .squares{
+    padding: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.bling .square::before{
+    background: rgba(255,255,255,0.5);
+    content: '';
+    -webkit-transition: -webkit-transform 0.6s;
+    transition: transform 0.6s;
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,30deg) translate3d(0,-100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,30deg) translate3d(0,-100%,0);
+}
+.bling:hover .square::before{
+    -webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,30deg) translate3d(0,100%,0);
+    transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,30deg) translate3d(0,100%,0);
+}
+.bling p{
+    position: absolute;
+    right: -25px;
+    bottom:-35px;
+    margin: 3em;
+    text-align: right;
+    opacity:0;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.bling:hover p {
+    opacity: 1;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+}
+.bling h2{
+    font-size: 20px;
+    text-align: left;
+}
+.bling.blings{
+    margin: 10px 1%;
+    max-width: 396.66px;
+    max-height: 493.14px;
+    background: #030c17;
+}
+.blings img{
+    opacity: 0.9;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.blings .squares .date.date-1{
+    display: block;
+    position:static;
+    margin: 20% auto 10px ;
+    background: url(../images/bgd-date-1.png) no-repeat;
+    background-size: 100%;
+}
+.blings .date.date-1 b{
+    font-size:14px;
+}
+.blings .date-1,.blings .topic-title{
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+.blings h3 {
+    padding: 1em;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+.blings:hover .date, .blings:hover .topic-title{
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+}
+.bling.blings:hover .squares::before,
+.bling.blings:hover h3 {
+    opacity: 1;
+    -webkit-transform: scale3d(1,1,1);
+    transform: scale3d(1,1,1);
+}
+.bling.blings:hover .squares {
+    background-color: rgba(58,52,42,0);
+}
+.blings:hover img {
+    opacity: 0.4;
+}
+.bling.lings{
+    margin: 10px 1%;
+    max-width: 396.66px;
+    max-height: 246.56px;
+    background: -webkit-linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+    background: linear-gradient(-45deg, #EC65B7 0%,#05E0D8 100%);
+}
+.lings img {
+    opacity: 0.85;
+    -webkit-transition: opacity 0.35s;
+    transition: opacity 0.35s;
+}
+.lings .bl,.lings h2{
+    padding: 20px;
+    width: 40%;
+    height: 40%;
+    border: 2px solid #fff;
+}
+.lings .bl{
+    position:relative;
+    text-align: left;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(10px,10px,0);
+    transform: translate3d(10px,10px,0);
+}
+.lings .bl .dates{
+    position:absolute;
+    left:0;
+    top:5px;
+    width: 64px;
+    height: 64px;
+    padding: 24px 20px;
+    text-align: center;
+    background: url(../images/bgd-date-2.png) no-repeat;
+    background-size: cover;
+}
+.dates i{
+    display:block;
+    font-family: normal;
+    width:50px;
+    margin-left:-15px;
+    color: #c7b374;
+    font-size: 12px;
+    line-height: 1;
+}
+.lings .moves .bl h3{
+    position:absolute;
+    right:-5px;
+    bottom:-5px;
+    font-size:12px;
+    -webkit-transform:scale(0.7);
+}
+.lings h2 {
+    float: right;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-50%,-50%,0);
+    transform: translate3d(-50%,-50%,0);
+}
+.lings:hover .bl{
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.lings:hover h2 {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+.lings:hover img {
+    opacity: 0.6;
+}
+
+

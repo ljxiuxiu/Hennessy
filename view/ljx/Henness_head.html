@@ -1,0 +1,19 @@
+
+<div class="c-menu-dropdown__container-list">
+    <ul class="c-menu-dropdown__list">
+        {%for intro in intros%}
+        <li class="c-menu-dropdown__box">
+            <a href="/intro#page{{intro.id}}">
+                <h4>{{intro.tname}}</h4>
+                <h3>{{intro.th3}}</h3>
+            </a>
+        </li>
+        {%endfor%}
+    </ul>
+    <a href="javascript:void(0)" class="c-menu-dropdown__arrow js-swiper-next">
+        <div class="c-menu-dropdown__arrow__circle">&#xe608;</div>
+    </a>
+    <a href="javascript:void(0)" class="c-menu-dropdown__arrow js-swiper-prev">
+        <div class="c-menu-dropdown__arrow__circle">&#xe625;</div>
+    </a>
+</div>

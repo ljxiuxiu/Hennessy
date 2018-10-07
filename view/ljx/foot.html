@@ -1,0 +1,74 @@
+<footer id="index_footer" class="footer">
+    <div class="f_img"></div>
+    <div class="f_top">
+        <div class="container-fluid">
+            <div class="row" id="rows">
+                {%for t in types%}
+                {%if t.tid!=1 && t.tid!=5%}
+                <div class="col-sm-4">
+                    <div class="menu">
+                        <dl>
+                            <dt>{{t.tname}}</dt>
+                            {%if t.tid==2%}
+                            {%for gy in gys%}
+                            {%if gy.lid!=1%}
+                            {%if gy.lid==2%}
+                            <dd><a href="/xzl/xd">{{gy.lname}}</a></dd>
+                            {%elseif gy.lid<=9%}
+                            <dd><a href="/xzl/tc">{{gy.lname}}</a></dd>
+                            {%endif%}
+                            {%endif%}
+                            {%endfor%}
+                            {%endif%}
+
+                            {%if t.tid==3%}
+                            {%for xns in xnss%}
+                            {%if xns.lid==10 || xns.lid==11%}
+                            <dd><a href="/jhj">{{xns.lname}}</a></dd>
+                            {%elseif xns.lid<=13%}
+                            <dd><a href="/jhj/history">{{xns.lname}}</a></dd>
+                            {%endif%}
+                            {%endfor%}
+                            {%endif%}
+
+                            {%if t.tid==4%}
+                            {%for cyty in cytys%}
+                            {%if cyty.lid==14 || cyty.lid==15%}
+                            <dd><a href="/jhj/drinks">{{cyty.lname}}</a></dd>
+                            {%else%}
+                            <dd><a href="/jhj/mixter">{{cyty.lname}}</a></dd>
+                            {%endif%}
+                            {%endfor%}
+                            {%endif%}
+                        </dl>
+                    </div>
+                </div>
+                {%endif%}
+                {%endfor%}
+
+            </div>
+        </div>
+    </div>
+    <div class="f_bottom">
+        <ul class="f_ul_top" >
+            <li><a href="">联络</a></li>
+            <li><a href="">常见问题</a></li>
+            <li><a href=""><span class="f_s1"></span></a></li>
+            <li><a href=""><span class="f_s2"></span></a></li>
+        </ul>
+        <ul>
+            <li><a href="">使用条款及条件</a></li>
+            <li><a href="">个人资料和cookies</a></li>
+            <li><a href="">我们的承诺</a></li>
+            <li><a href="">请理性享用轩尼诗干邑</a></li>
+        </ul>
+        <p>
+            <a href="">
+                酗酒有害健康<br/>
+                沪ICP备10018200号-16
+            </a>
+        </p>
+        <span class="copy">© Hennessy 2018</span>
+    </div>
+</footer>
+
